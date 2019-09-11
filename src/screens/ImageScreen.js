@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native'
+import ImageDetail from '../components/ImageDetail'
 
 export default class ImageScreen extends Component {
   constructor (props) {
@@ -9,9 +10,14 @@ export default class ImageScreen extends Component {
 
   render () {
     return (
-      <View>
-        <Text> ImageScreen </Text>
-      </View>
+      <SafeAreaView>
+        <ImageDetail title='marmar' imageSource={require('../../assets/house_1.png')} score='1' />
+        <ImageDetail title='gerger' imageSource={require('../../assets/house_2.png')} score='3' />
+      </SafeAreaView>
     )
+  }
+
+  styles () {
+    return StyleSheet.create({})
   }
 }
